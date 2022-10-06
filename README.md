@@ -489,3 +489,7 @@ There may be any number of submission post contain a submission.
 The database keep submission post data (SUBMISSION\_POST).
 
 A submission post contains only one submission.
+
+## EER LinkedinMoodle
+![EER Diagram](https://user-images.githubusercontent.com/112978786/194402657-a31ed67b-20ea-4ce7-b904-add4f4bb931b.jpg)
+
