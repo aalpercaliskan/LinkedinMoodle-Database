@@ -1,6 +1,3 @@
-CREATE DATABASE PROJE106;
-USE PROJE106;
-
 CREATE TABLE CONSUMER
 (
 	Consumer_id INT NOT NULL IDENTITY,
@@ -129,7 +126,7 @@ CREATE TABLE INSTRUCTOR
 (
 	Consumer_id INT NOT NULL,
 	Ins_rank VARCHAR(50) NOT NULL, 
-	Dept_›d INT NOT NULL,
+	Dept_√ùd INT NOT NULL,
 	PRIMARY KEY (Consumer_id),
 	FOREIGN KEY (Consumer_id) REFERENCES CONSUMER (Consumer_id) ON DELETE CASCADE ON UPDATE CASCADE,
 	FOREIGN KEY (Dept_id) REFERENCES DEPARTMENT (Dept_id) 
@@ -469,7 +466,7 @@ AS
 				SELECT *
 				FROM inserted AS I
 				INNER JOIN INSTRUCTOR AS INS ON I.Given_by = INS.Consumer_id
-				WHERE I.Dept_id = INS.Dept_›d 
+				WHERE I.Dept_id = INS.Dept_√ùd 
 				))
 	BEGIN 
 			ROLLBACK
@@ -641,35 +638,35 @@ AS
 	WHERE S.Grade >= 60;
 GO
 
-INSERT INTO CONSUMER VALUES ('alper@gmail.com', '12345678','Alper','«al˝˛kan','T¸rkiye','›zmir','2000-07-20','M'); 
-INSERT INTO CONSUMER VALUES ('deniz@gmail.com', '123as4','Deniz','Uslu','T¸rkiye','Bursa','1970-04-12','M'); 
-INSERT INTO CONSUMER VALUES ('mustafa@gmail.com', 'sc89axx','Mustafa','Kal˝r','T¸rkiye','Ankara','1980-04-23','M'); 
-INSERT INTO CONSUMER VALUES ('ali@gmail.com', 'sas12aTC','Ali','Mehmet','T¸rkiye','Sivas','2001-11-20','M');  
-INSERT INTO CONSUMER VALUES ('ahmet@gmail.com', '5sCdvga','Ahmet','Soy','T¸rkiye','Bolu','1995-01-01','M');
-INSERT INTO CONSUMER VALUES ('r˝fk˝@gmail.com', 'sad5esa','R˝fk˝','BiÁim','T¸rkiye','Manisa','1988-02-14','M');
-INSERT INTO CONSUMER VALUES ('r¸ya@gmail.com', '254222','R¸ya','Dede','T¸rkiye','›zmir','1960-05-13','F');
-INSERT INTO CONSUMER VALUES ('yamur@gmail.com', '2452452','Yamur','Ya˛ar','T¸rkiye','›zmir','1964-05-13','F');
-INSERT INTO CONSUMER VALUES ('sevg¸l@gmail.com', '24525424','Sevg¸l','Dede','T¸rkiye','›zmir','1977-05-13','F');
-INSERT INTO CONSUMER VALUES ('erdoan@gmail.com', 'fefef65','Erdoan','Baba','T¸rkiye','Sivas','1972-03-13','M'); 
-INSERT INTO CONSUMER VALUES ('ismail@gmail.com', 'fe45dsf5','›smail','Yiit','T¸rkiye','Samsun','1980-03-23','M');
-INSERT INTO CONSUMER VALUES ('recep@gmail.com', 'h5wDf4sf','Recep','Kadir','T¸rkiye','«anakkale','1999-07-10','M');
-INSERT INTO CONSUMER VALUES ('dou˛@gmail.com', 'fwf54fsd','Dou˛','R˝za','T¸rkiye','«anakkale','1989-05-30','M');
-INSERT INTO CONSUMER VALUES ('kemal@gmail.com', 'dsa54as','Kemal','Yaman','T¸rkiye','Yozgat','1999-06-30','F');
+INSERT INTO CONSUMER VALUES ('alper@gmail.com', '12345678','Alper','√áal√Ω√ækan','T√ºrkiye','√ùzmir','2000-07-20','M'); 
+INSERT INTO CONSUMER VALUES ('deniz@gmail.com', '123as4','Deniz','Uslu','T√ºrkiye','Bursa','1970-04-12','M'); 
+INSERT INTO CONSUMER VALUES ('mustafa@gmail.com', 'sc89axx','Mustafa','Kal√Ωr','T√ºrkiye','Ankara','1980-04-23','M'); 
+INSERT INTO CONSUMER VALUES ('ali@gmail.com', 'sas12aTC','Ali','Mehmet','T√ºrkiye','Sivas','2001-11-20','M');  
+INSERT INTO CONSUMER VALUES ('ahmet@gmail.com', '5sCdvga','Ahmet','Soy','T√ºrkiye','Bolu','1995-01-01','M');
+INSERT INTO CONSUMER VALUES ('r√Ωfk√Ω@gmail.com', 'sad5esa','R√Ωfk√Ω','Bi√ßim','T√ºrkiye','Manisa','1988-02-14','M');
+INSERT INTO CONSUMER VALUES ('r√ºya@gmail.com', '254222','R√ºya','Dede','T√ºrkiye','√ùzmir','1960-05-13','F');
+INSERT INTO CONSUMER VALUES ('ya√∞mur@gmail.com', '2452452','Ya√∞mur','Ya√æar','T√ºrkiye','√ùzmir','1964-05-13','F');
+INSERT INTO CONSUMER VALUES ('sevg√ºl@gmail.com', '24525424','Sevg√ºl','Dede','T√ºrkiye','√ùzmir','1977-05-13','F');
+INSERT INTO CONSUMER VALUES ('erdo√∞an@gmail.com', 'fefef65','Erdo√∞an','Baba','T√ºrkiye','Sivas','1972-03-13','M'); 
+INSERT INTO CONSUMER VALUES ('ismail@gmail.com', 'fe45dsf5','√ùsmail','Yi√∞it','T√ºrkiye','Samsun','1980-03-23','M');
+INSERT INTO CONSUMER VALUES ('recep@gmail.com', 'h5wDf4sf','Recep','Kadir','T√ºrkiye','√áanakkale','1999-07-10','M');
+INSERT INTO CONSUMER VALUES ('do√∞u√æ@gmail.com', 'fwf54fsd','Do√∞u√æ','R√Ωza','T√ºrkiye','√áanakkale','1989-05-30','M');
+INSERT INTO CONSUMER VALUES ('kemal@gmail.com', 'dsa54as','Kemal','Yaman','T√ºrkiye','Yozgat','1999-06-30','F');
 
-INSERT INTO COMPANY VALUES ('Ege ‹niversitesi', 'T¸rkiye', '›zmir', 'Eitim',1);
-INSERT INTO COMPANY VALUES ('Dokuz Eyl¸l ‹niversitesi', 'T¸rkiye', '›zmir', 'Eitim',2);
-INSERT INTO COMPANY VALUES ('›stanbul Teknik ‹niversitesi', 'T¸rkiye', '›zmir', 'Eitim',3);
-INSERT INTO COMPANY VALUES ('ArÁelik', 'T¸rkiye', '›stanbul', 'Beyaz E˛ya',11);
+INSERT INTO COMPANY VALUES ('Ege √úniversitesi', 'T√ºrkiye', '√ùzmir', 'E√∞itim',1);
+INSERT INTO COMPANY VALUES ('Dokuz Eyl√ºl √úniversitesi', 'T√ºrkiye', '√ùzmir', 'E√∞itim',2);
+INSERT INTO COMPANY VALUES ('√ùstanbul Teknik √úniversitesi', 'T√ºrkiye', '√ùzmir', 'E√∞itim',3);
+INSERT INTO COMPANY VALUES ('Ar√ßelik', 'T√ºrkiye', '√ùstanbul', 'Beyaz E√æya',11);
 INSERT INTO COMPANY VALUES ('Ubisoft', 'Fransa', 'Paris', 'Oyun',6);
-INSERT INTO COMPANY VALUES ('KoÁ ‹niversitesi', 'T¸rkiye', '›stanbul', 'Eitim',2);
-INSERT INTO COMPANY VALUES ('Orta Dou Teknik ‹niversitesi', 'T¸rkiye', 'Ankara', 'Eitim',5);
+INSERT INTO COMPANY VALUES ('Ko√ß √úniversitesi', 'T√ºrkiye', '√ùstanbul', 'E√∞itim',2);
+INSERT INTO COMPANY VALUES ('Orta Do√∞u Teknik √úniversitesi', 'T√ºrkiye', 'Ankara', 'E√∞itim',5);
 INSERT INTO COMPANY VALUES ('Tesla', 'Amerika', 'Kaliforniya', 'Otomotiv',12);
-INSERT INTO COMPANY VALUES ('Ferrari', '›talya', 'Maranello', 'Otomotiv',10);
-INSERT INTO COMPANY VALUES ('Vestel', 'T¸rkiye', 'Manisa', 'Ev E˛yalar˝',5);
+INSERT INTO COMPANY VALUES ('Ferrari', '√ùtalya', 'Maranello', 'Otomotiv',10);
+INSERT INTO COMPANY VALUES ('Vestel', 'T√ºrkiye', 'Manisa', 'Ev E√æyalar√Ω',5);
 
-INSERT INTO UNIVERSITY (Uni_name,Country,City) VALUES ('Ege ‹niversitesi', 'T¸rkiye', '›zmir');
-INSERT INTO UNIVERSITY (Uni_name,Country,City) VALUES ('Dokuz Eyl¸l ‹niversitesi', 'T¸rkiye', '›zmir');
-INSERT INTO UNIVERSITY (Uni_name,Country,City) VALUES ('›stanbul Teknik ‹niversitesi', 'T¸rkiye', '›stanbul');
+INSERT INTO UNIVERSITY (Uni_name,Country,City) VALUES ('Ege √úniversitesi', 'T√ºrkiye', '√ùzmir');
+INSERT INTO UNIVERSITY (Uni_name,Country,City) VALUES ('Dokuz Eyl√ºl √úniversitesi', 'T√ºrkiye', '√ùzmir');
+INSERT INTO UNIVERSITY (Uni_name,Country,City) VALUES ('√ùstanbul Teknik √úniversitesi', 'T√ºrkiye', '√ùstanbul');
 
 INSERT INTO DEPT_PASSWORD VALUES('123456', '45645456');
 INSERT INTO DEPT_PASSWORD VALUES('54545', '543442');
@@ -688,21 +685,21 @@ INSERT INTO COURSE_PASSWORD VALUES('GH24524', '22HFDVS');
 INSERT INTO COURSE_PASSWORD VALUES('254GJGJ', 'ASCV514');
 INSERT INTO COURSE_PASSWORD VALUES('12HKHKHK', 'CDS54CDS');
 
-INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Bilgisayar M¸hendislii', 1);
-INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Eczac˝l˝k', 1);
-INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Di˛ Hekimlii', 2);
-INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Bilgisayar M¸hendislii', 2);
-INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Bilgisayar M¸hendislii', 3);
+INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Bilgisayar M√ºhendisli√∞i', 1);
+INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Eczac√Ωl√Ωk', 1);
+INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Di√æ Hekimli√∞i', 2);
+INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Bilgisayar M√ºhendisli√∞i', 2);
+INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Bilgisayar M√ºhendisli√∞i', 3);
 INSERT INTO DEPARTMENT (Dept_name,Uni_id) VALUES ('Anestezi', 3);
 
-INSERT INTO INSTRUCTOR VALUES (1,'Profesˆr',1);
-INSERT INTO INSTRUCTOR VALUES (2,'DoÁent',4);
-INSERT INTO INSTRUCTOR VALUES (3,'Profesˆr',5);
+INSERT INTO INSTRUCTOR VALUES (1,'Profes√∂r',1);
+INSERT INTO INSTRUCTOR VALUES (2,'Do√ßent',4);
+INSERT INTO INSTRUCTOR VALUES (3,'Profes√∂r',5);
 
-INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Nesneye Dayal˝ Programlama',2020,1,'Java',1,1);
+INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Nesneye Dayal√Ω Programlama',2020,1,'Java',1,1);
 INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Programlama Dilleri',2020,1,'C',4,2);
-INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Olas˝l˝k ve ›statistik',2019,2,'Matlab',5,3);
-INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Yapay Zeka Yˆntemleri',2020,1,'Python',5,3);
+INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Olas√Ωl√Ωk ve √ùstatistik',2019,2,'Matlab',5,3);
+INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Yapay Zeka Y√∂ntemleri',2020,1,'Python',5,3);
 INSERT INTO COURSE (Course_name,Course_year,Course_sem,Skill_acquisition,Dept_id,Given_by) VALUES ('Programlama Dilleri',2020,1,'C',5,3);
 
 INSERT INTO STUDENT VALUES (4,4);
@@ -724,99 +721,99 @@ INSERT INTO STUDENT_COURSE (Student_id,Course_id) VALUES (9,4);
 INSERT INTO STUDENT_COURSE (Student_id,Course_id) VALUES (9,5);
 INSERT INTO STUDENT_COURSE (Student_id,Course_id) VALUES (10,5);
 
-INSERT INTO ASSIGNMENT VALUES (2,'Proje1','2020-10-24','2020-10-30','(›«ER›K)', 2);
-INSERT INTO ASSIGNMENT VALUES (2,'Proje2','2020-11-24','2020-11-30','(›«ER›K)', 2);
+INSERT INTO ASSIGNMENT VALUES (2,'Proje1','2020-10-24','2020-10-30','(√ù√áER√ùK)', 2);
+INSERT INTO ASSIGNMENT VALUES (2,'Proje2','2020-11-24','2020-11-30','(√ù√áER√ùK)', 2);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-10-25','(›«ER›K)',96,2,'Proje1',4);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-11-29','(›«ER›K)',75,2,'Proje2',4);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-10-25','(√ù√áER√ùK)',96,2,'Proje1',4);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-11-29','(√ù√áER√ùK)',75,2,'Proje2',4);
 
-INSERT INTO ASSIGNMENT VALUES (3,'Proje1','2020-09-01','2020-09-05','(›«ER›K)', 3);
-INSERT INTO ASSIGNMENT VALUES (3,'Proje2','2020-12-12','2020-12-28','(›«ER›K)', 3);
-INSERT INTO ASSIGNMENT VALUES (3,'Proje3','2021-01-12','2021-01-20','(›«ER›K)', 3);
-INSERT INTO ASSIGNMENT VALUES (3,'Proje4','2020-09-12','2020-09-22','(›«ER›K)', 3);
+INSERT INTO ASSIGNMENT VALUES (3,'Proje1','2020-09-01','2020-09-05','(√ù√áER√ùK)', 3);
+INSERT INTO ASSIGNMENT VALUES (3,'Proje2','2020-12-12','2020-12-28','(√ù√áER√ùK)', 3);
+INSERT INTO ASSIGNMENT VALUES (3,'Proje3','2021-01-12','2021-01-20','(√ù√áER√ùK)', 3);
+INSERT INTO ASSIGNMENT VALUES (3,'Proje4','2020-09-12','2020-09-22','(√ù√áER√ùK)', 3);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-09-05','(›«ER›K)',80,3,'Proje1',5);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-27','(›«ER›K)',50,3,'Proje2',5);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-09-05','(√ù√áER√ùK)',80,3,'Proje1',5);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-27','(√ù√áER√ùK)',50,3,'Proje2',5);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-09-02','(›«ER›K)',60,3,'Proje1',6);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-18','(›«ER›K)',55,3,'Proje2',6);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2021-01-15','(›«ER›K)',78,3,'Proje3',6);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-09-20','(›«ER›K)',100,3,'Proje4',6);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-09-02','(√ù√áER√ùK)',60,3,'Proje1',6);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-18','(√ù√áER√ùK)',55,3,'Proje2',6);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2021-01-15','(√ù√áER√ùK)',78,3,'Proje3',6);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-09-20','(√ù√áER√ùK)',100,3,'Proje4',6);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-09-01','(›«ER›K)',45,3,'Proje1',7);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2021-01-14','(›«ER›K)',30,3,'Proje3',7);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-09-18','(›«ER›K)',75,3,'Proje4',7);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-09-01','(√ù√áER√ùK)',45,3,'Proje1',7);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2021-01-14','(√ù√áER√ùK)',30,3,'Proje3',7);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-09-18','(√ù√áER√ùK)',75,3,'Proje4',7);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-09-02','(›«ER›K)',40,3,'Proje1',9);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-19','(›«ER›K)',50,3,'Proje2',9);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2021-01-14','(›«ER›K)',65,3,'Proje3',9);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-09-19','(›«ER›K)',52,3,'Proje4',9);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-09-02','(√ù√áER√ùK)',40,3,'Proje1',9);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-19','(√ù√áER√ùK)',50,3,'Proje2',9);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2021-01-14','(√ù√áER√ùK)',65,3,'Proje3',9);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-09-19','(√ù√áER√ùK)',52,3,'Proje4',9);
 
-INSERT INTO ASSIGNMENT VALUES (4,'Proje1','2020-10-15','2020-10-20','(›«ER›K)', 3);
-INSERT INTO ASSIGNMENT VALUES (4,'Proje2','2020-12-18','2020-12-25','(›«ER›K)', 3);
+INSERT INTO ASSIGNMENT VALUES (4,'Proje1','2020-10-15','2020-10-20','(√ù√áER√ùK)', 3);
+INSERT INTO ASSIGNMENT VALUES (4,'Proje2','2020-12-18','2020-12-25','(√ù√áER√ùK)', 3);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-10-16','(›«ER›K)',98,4,'Proje1',5);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-20','(›«ER›K)',46,4,'Proje2',5);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-10-16','(√ù√áER√ùK)',98,4,'Proje1',5);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-20','(√ù√áER√ùK)',46,4,'Proje2',5);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-10-17','(›«ER›K)',24,4,'Proje1',8);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-18','(›«ER›K)',58,4,'Proje2',8);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-10-17','(√ù√áER√ùK)',24,4,'Proje1',8);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-18','(√ù√áER√ùK)',58,4,'Proje2',8);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-10-17','(›«ER›K)',88,4,'Proje1',9);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-20','(›«ER›K)',94,4,'Proje2',9);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-10-17','(√ù√áER√ùK)',88,4,'Proje1',9);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-20','(√ù√áER√ùK)',94,4,'Proje2',9);
 
-INSERT INTO ASSIGNMENT VALUES (5,'Proje1','2020-12-18','2020-12-30','(›«ER›K)', 3);
+INSERT INTO ASSIGNMENT VALUES (5,'Proje1','2020-12-18','2020-12-30','(√ù√áER√ùK)', 3);
 
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-25','(›«ER›K)',60,5,'Proje1',9);
-INSERT INTO SUBMISSION VALUES ('Proje y¸klemesi', '2020-12-20','(›«ER›K)',59,5,'Proje1',10);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-25','(√ù√áER√ùK)',60,5,'Proje1',9);
+INSERT INTO SUBMISSION VALUES ('Proje y√ºklemesi', '2020-12-20','(√ù√áER√ùK)',59,5,'Proje1',10);
 
 INSERT INTO SKILL VALUES ('Matlab');
 INSERT INTO SKILL VALUES ('C');
 INSERT INTO SKILL VALUES ('Java');
 INSERT INTO SKILL VALUES ('Python');
 INSERT INTO SKILL VALUES ('Liderlik');
-INSERT INTO SKILL VALUES ('Grup «al˝˛mas˝');
-INSERT INTO SKILL VALUES ('›leti˛im');
+INSERT INTO SKILL VALUES ('Grup √áal√Ω√æmas√Ω');
+INSERT INTO SKILL VALUES ('√ùleti√æim');
 INSERT INTO SKILL VALUES ('Kotlin');
 INSERT INTO SKILL VALUES ('AutoCAD');
 INSERT INTO SKILL VALUES ('SQL');
 
 INSERT INTO CONSUMER_SKILL VALUES (4,'SQL');
-INSERT INTO CONSUMER_SKILL VALUES (7,'›leti˛im');
+INSERT INTO CONSUMER_SKILL VALUES (7,'√ùleti√æim');
 INSERT INTO CONSUMER_SKILL VALUES (12,'AutoCAD');
-INSERT INTO CONSUMER_SKILL VALUES (1,'Grup «al˝˛mas˝');
-INSERT INTO CONSUMER_SKILL VALUES (5,'Grup «al˝˛mas˝');
+INSERT INTO CONSUMER_SKILL VALUES (1,'Grup √áal√Ω√æmas√Ω');
+INSERT INTO CONSUMER_SKILL VALUES (5,'Grup √áal√Ω√æmas√Ω');
 INSERT INTO CONSUMER_SKILL VALUES (2,'Liderlik');
 INSERT INTO CONSUMER_SKILL VALUES (10,'SQL');
 INSERT INTO CONSUMER_SKILL VALUES (4,'AutoCAD');
 
 INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (4,1,'AutoCAD');
-INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (5,3,'Grup «al˝˛mas˝');
+INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (5,3,'Grup √áal√Ω√æmas√Ω');
 INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (2,10,'Liderlik');
 INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (4,12,'AutoCAD');
 INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (2,1,'Liderlik');
-INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (7,3,'›leti˛im');
-INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (7,2,'›leti˛im');
+INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (7,3,'√ùleti√æim');
+INSERT INTO CONSUMER_SKILL_ENDORSE VALUES (7,2,'√ùleti√æim');
 
-INSERT INTO POST VALUES ('2020-05-14', '(›«ER›K)', null, 1);
-INSERT INTO POST VALUES ('2021-04-12', '(›«ER›K)', 2, 4);       
-INSERT INTO POST VALUES ('2020-10-25', '(›«ER›K)', null, 4);
-INSERT INTO POST VALUES ('2020-11-16', '(›«ER›K)', 2, 4);
-INSERT INTO POST VALUES ('2021-03-17', '(›«ER›K)', 3, 5);
-INSERT INTO POST VALUES ('2019-01-18', '(›«ER›K)', 4, 5);
-INSERT INTO POST VALUES ('2020-10-19', '(›«ER›K)', null, 11);
-INSERT INTO POST VALUES ('2021-08-14', '(›«ER›K)', 3, 7);
-INSERT INTO POST VALUES ('2021-10-04', '(›«ER›K)', 4, 8);
-INSERT INTO POST VALUES ('2021-09-09', '(›«ER›K)', 2, 2);
-INSERT INTO POST VALUES ('2020-03-11', '(›«ER›K)', 3, 5);
-INSERT INTO POST VALUES ('2021-04-13', '(›«ER›K)', 3, 6);
-INSERT INTO POST VALUES ('2020-04-14', '(›«ER›K)', null, 5);
-INSERT INTO POST VALUES ('2021-12-19', '(›«ER›K)', null, 5);
-INSERT INTO POST VALUES ('2021-07-25', '(›«ER›K)', null, 5);
-INSERT INTO POST VALUES ('2021-10-19', '(›«ER›K)', null, 11);
-INSERT INTO POST VALUES ('2019-06-08', '(›«ER›K)', null, 11);
-INSERT INTO POST VALUES ('2020-01-26', '(›«ER›K)', null, 12);
-INSERT INTO POST VALUES ('2021-08-18', '(›«ER›K)', null, 12);
-INSERT INTO POST VALUES ('2019-10-19', '(›«ER›K)', null, 13);
+INSERT INTO POST VALUES ('2020-05-14', '(√ù√áER√ùK)', null, 1);
+INSERT INTO POST VALUES ('2021-04-12', '(√ù√áER√ùK)', 2, 4);       
+INSERT INTO POST VALUES ('2020-10-25', '(√ù√áER√ùK)', null, 4);
+INSERT INTO POST VALUES ('2020-11-16', '(√ù√áER√ùK)', 2, 4);
+INSERT INTO POST VALUES ('2021-03-17', '(√ù√áER√ùK)', 3, 5);
+INSERT INTO POST VALUES ('2019-01-18', '(√ù√áER√ùK)', 4, 5);
+INSERT INTO POST VALUES ('2020-10-19', '(√ù√áER√ùK)', null, 11);
+INSERT INTO POST VALUES ('2021-08-14', '(√ù√áER√ùK)', 3, 7);
+INSERT INTO POST VALUES ('2021-10-04', '(√ù√áER√ùK)', 4, 8);
+INSERT INTO POST VALUES ('2021-09-09', '(√ù√áER√ùK)', 2, 2);
+INSERT INTO POST VALUES ('2020-03-11', '(√ù√áER√ùK)', 3, 5);
+INSERT INTO POST VALUES ('2021-04-13', '(√ù√áER√ùK)', 3, 6);
+INSERT INTO POST VALUES ('2020-04-14', '(√ù√áER√ùK)', null, 5);
+INSERT INTO POST VALUES ('2021-12-19', '(√ù√áER√ùK)', null, 5);
+INSERT INTO POST VALUES ('2021-07-25', '(√ù√áER√ùK)', null, 5);
+INSERT INTO POST VALUES ('2021-10-19', '(√ù√áER√ùK)', null, 11);
+INSERT INTO POST VALUES ('2019-06-08', '(√ù√áER√ùK)', null, 11);
+INSERT INTO POST VALUES ('2020-01-26', '(√ù√áER√ùK)', null, 12);
+INSERT INTO POST VALUES ('2021-08-18', '(√ù√áER√ùK)', null, 12);
+INSERT INTO POST VALUES ('2019-10-19', '(√ù√áER√ùK)', null, 13);
 
 INSERT INTO SUBMISSION_POST VALUES (2,1);
 INSERT INTO SUBMISSION_POST VALUES (3,1);
@@ -831,30 +828,30 @@ INSERT INTO SUBMISSION_POST VALUES (13,4);
 INSERT INTO SUBMISSION_POST VALUES (14,16);
 INSERT INTO SUBMISSION_POST VALUES (15,3);
 
-INSERT INTO WORKS_FOR VALUES (1,1,'2018-07-15', null, 'Profesˆr');
-INSERT INTO WORKS_FOR VALUES (2,2,'2018-02-13', null, 'DoÁent');
-INSERT INTO WORKS_FOR VALUES (3,3,'2020-02-18',null,'Profesˆr');
+INSERT INTO WORKS_FOR VALUES (1,1,'2018-07-15', null, 'Profes√∂r');
+INSERT INTO WORKS_FOR VALUES (2,2,'2018-02-13', null, 'Do√ßent');
+INSERT INTO WORKS_FOR VALUES (3,3,'2020-02-18',null,'Profes√∂r');
 INSERT INTO WORKS_FOR VALUES (11,4, '2015-05-16','2020-04-20', 'CEO');
 INSERT INTO WORKS_FOR VALUES (12,4, '2015-06-08','2021-08-12','Sekreter');
 INSERT INTO WORKS_FOR VALUES (13,5,'2015-04-05','2018-03-30','CEO');
-INSERT INTO WORKS_FOR VALUES (11,5,'2020-07-20',null,'Yaz˝l˝m Uzman˝');
-INSERT INTO WORKS_FOR VALUES (11,3, '2005-02-04', null,'Profesˆr');
+INSERT INTO WORKS_FOR VALUES (11,5,'2020-07-20',null,'Yaz√Ωl√Ωm Uzman√Ω');
+INSERT INTO WORKS_FOR VALUES (11,3, '2005-02-04', null,'Profes√∂r');
 INSERT INTO WORKS_FOR VALUES (13,4, '2002-10-10', '2020-05-13', 'Grafiker');
-INSERT INTO WORKS_FOR VALUES (12,5, '2018-09-15', null, 'M¸˛teri Temsilcisi');
+INSERT INTO WORKS_FOR VALUES (12,5, '2018-09-15', null, 'M√º√æteri Temsilcisi');
 
-INSERT INTO GETS_EDUCATION VALUES (4,2,'2018-09-15',null,'Bilgisayar M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (5,3,'2019-09-20',null,'Bilgisayar M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (6,3,'2020-09-21',null,'Bilgisayar M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (7,3,'2018-09-19',null,'Bilgisayar M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (8,3,'2020-09-20',null,'Bilgisayar M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (9,3,'2021-09-20',null,'Bilgisayar M¸hendislii');
+INSERT INTO GETS_EDUCATION VALUES (4,2,'2018-09-15',null,'Bilgisayar M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (5,3,'2019-09-20',null,'Bilgisayar M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (6,3,'2020-09-21',null,'Bilgisayar M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (7,3,'2018-09-19',null,'Bilgisayar M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (8,3,'2020-09-20',null,'Bilgisayar M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (9,3,'2021-09-20',null,'Bilgisayar M√ºhendisli√∞i');
 
-INSERT INTO GETS_EDUCATION VALUES (1,1,'2005-09-18','2009-06-20','Bilgisayar M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (2,2,'2009-09-13','2014-06-15','Bilgisayar M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (11,6,'2010-09-15',null,'›ngiliz Dili ve Edebiyat˝');
-INSERT INTO GETS_EDUCATION VALUES (12,3,'2012-09-21',null,'Di˛ Hekimlii');
-INSERT INTO GETS_EDUCATION VALUES (11,7,'2014-09-20',null,'Kimya M¸hendislii');
-INSERT INTO GETS_EDUCATION VALUES (13,2,'2018-09-25','2020-06-18','Bilgisayar M¸hendislii');
+INSERT INTO GETS_EDUCATION VALUES (1,1,'2005-09-18','2009-06-20','Bilgisayar M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (2,2,'2009-09-13','2014-06-15','Bilgisayar M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (11,6,'2010-09-15',null,'√ùngiliz Dili ve Edebiyat√Ω');
+INSERT INTO GETS_EDUCATION VALUES (12,3,'2012-09-21',null,'Di√æ Hekimli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (11,7,'2014-09-20',null,'Kimya M√ºhendisli√∞i');
+INSERT INTO GETS_EDUCATION VALUES (13,2,'2018-09-25','2020-06-18','Bilgisayar M√ºhendisli√∞i');
 
 INSERT INTO COMMUNITY VALUES ('Kripto Para','Ekonomi',5)
 INSERT INTO COMMUNITY VALUES ('Dijital Pazarlama','Finans',3)
@@ -874,10 +871,10 @@ SELECT COUNT(Company_id) AS 'Number of company' ,City
 FROM COMPANY 
 GROUP BY City
 
---Number of consumers living in ›zmir, «anakkale or Sivas
+--Number of consumers living in √ùzmir, √áanakkale or Sivas
 SELECT COUNT(Consumer_id), City
 FROM CONSUMER
-WHERE City = '›zmir' OR City = '«anakkale' OR City = 'Sivas'
+WHERE City = '√ùzmir' OR City = '√áanakkale' OR City = 'Sivas'
 GROUP BY City
 
 --Consumers whose names start with 'A'
@@ -906,12 +903,12 @@ FROM WORKS_FOR AS W
 	INNER JOIN COMPANY C ON W.Company_id = C.Company_id
 GROUP BY C.Company_name
 
---Names, surnames and positions of ArÁelik employees by year of employment
+--Names, surnames and positions of Ar√ßelik employees by year of employment
 SELECT CM.Fname, CM.Lname, W.Position,w.Work_start_date
 FROM WORKS_FOR AS W
 	 INNER JOIN COMPANY AS CP ON W.Company_id = CP.Company_id
 	 INNER JOIN CONSUMER AS CM ON W.Consumer_id = CM.Consumer_id
-WHERE CP.Company_name = 'ArÁelik'
+WHERE CP.Company_name = 'Ar√ßelik'
 ORDER BY W.Work_start_date
 
 --Number of posts and e-mails made by Ubisoft employees
@@ -941,7 +938,7 @@ WHERE S.Dept_id IS NULL AND GE.Edu_end_date IS NULL
 SELECT C.Company_name
 FROM COMPANY AS C
 	 LEFT JOIN UNIVERSITY AS U ON C.Company_id = U.Company_id
-WHERE U.Uni_name IS NULL AND C.Company_industry = 'Eitim'
+WHERE U.Uni_name IS NULL AND C.Company_industry = 'E√∞itim'
 
 --Emails of students registered in the education system
 SELECT C.Email
@@ -954,28 +951,28 @@ WHERE C.Email LIKE '%e%'
 SELECT U.Uni_name
 FROM UNIVERSITY AS U 
 	 INNER JOIN DEPARTMENT AS D ON U.Uni_id = D.Uni_id
-WHERE D.Dept_name = 'Bilgisayar M¸hendislii'
+WHERE D.Dept_name = 'Bilgisayar M√ºhendisli√∞i'
 
 
 /* First names, last names and grades of students whose have higher 
-grades than average grade of 'Olas˝l˝k ve ›statistik'
-course that given by ›stanbul Teknik ‹niversitesi computer engineering */
+grades than average grade of 'Olas√Ωl√Ωk ve √ùstatistik'
+course that given by √ùstanbul Teknik √úniversitesi computer engineering */
 DECLARE
 @Ortalama INT
 SET @Ortalama = (SELECT AVG(Grade) 
 				 FROM STUDENT_COURSE AS SC 
 					  INNER JOIN UNI_INFO AS UI ON SC.Course_id = UI.Course_id
-				 WHERE Uni_name = '›stanbul Teknik ‹niversitesi' AND
-					   Dept_name = 'Bilgisayar M¸hendislii'
-				       AND Course_name = 'Olas˝l˝k ve ›statistik')	    
+				 WHERE Uni_name = '√ùstanbul Teknik √úniversitesi' AND
+					   Dept_name = 'Bilgisayar M√ºhendisli√∞i'
+				       AND Course_name = 'Olas√Ωl√Ωk ve √ùstatistik')	    
 SELECT Fname, Lname, Grade
 FROM STUDENT_COURSE AS SC 
 	INNER JOIN CONSUMER AS C ON SC.Student_id = C.Consumer_id
 	INNER JOIN UNI_INFO AS UI ON SC.Course_id = UI.Course_id
-WHERE Uni_name = '›stanbul Teknik ‹niversitesi' AND Dept_name = 'Bilgisayar M¸hendislii'
-					AND Course_name = 'Olas˝l˝k ve ›statistik' AND Grade  > @Ortalama 
+WHERE Uni_name = '√ùstanbul Teknik √úniversitesi' AND Dept_name = 'Bilgisayar M√ºhendisli√∞i'
+					AND Course_name = 'Olas√Ωl√Ωk ve √ùstatistik' AND Grade  > @Ortalama 
 
---Students who take lessons from Mustafa Kal˝r
+--Students who take lessons from Mustafa Kal√Ωr
 select C.Fname, C.Lname, CO.Course_name
 FROM CONSUMER AS C
 	 INNER JOIN STUDENT AS S ON C.Consumer_id = S.Consumer_id
@@ -995,19 +992,19 @@ FROM SUBMISSION_POST AS SP
 WHERE Gender = 'M'
 ORDER BY P.Post_time
 
-/* Students' names, surnames and skills that endorsed by Mustafa Kal˝r 
+/* Students' names, surnames and skills that endorsed by Mustafa Kal√Ωr 
 because of completed their courses  */
 SELECT ENDORSED.Fname, ENDORSED.Lname, CSE.Skill_name
 FROM CONSUMER_SKILL_ENDORSE AS CSE
 	INNER JOIN CONSUMER_SKILL AS CS ON CSE.Endorsed_consumer = CS.Consumer_id AND CSE.Skill_name = CS.Skill_name
 	INNER JOIN CONSUMER AS ENDORSED ON CS.Consumer_id = ENDORSED.Consumer_id
 	INNER JOIN CONSUMER AS ENDORSE_BY ON ENDORSE_BY.Consumer_id = CSE.Endorsed_by
-WHERE ENDORSE_BY.Fname = 'Mustafa' AND ENDORSE_BY.Lname = 'Kal˝r'
+WHERE ENDORSE_BY.Fname = 'Mustafa' AND ENDORSE_BY.Lname = 'Kal√Ωr'
 	  AND CSE.Skill_name IN (SELECT CO.Skill_acquisition
 							 FROM  INSTRUCTOR AS I, COURSE AS CO
 							 WHERE ENDORSE_BY.Consumer_id = I.Consumer_id AND
 								   CO.Given_by = I.Consumer_id AND
-								   ENDORSE_BY.Fname = 'Mustafa' AND ENDORSE_BY.Lname = 'Kal˝r')
+								   ENDORSE_BY.Fname = 'Mustafa' AND ENDORSE_BY.Lname = 'Kal√Ωr')
 
 --Students' first name, last name and skill name whose skills are endorsed by their teachers
 SELECT CO.Fname, CO.Lname ,CSE.Skill_name
@@ -1051,7 +1048,7 @@ FROM CONSUMER
 
 UPDATE CONSUMER
 SET Email = 'alper2@gmail.com', Login_password = 'sfFV445a'
-WHERE Fname = 'Alper' AND Lname = '«al˝˛kan'
+WHERE Fname = 'Alper' AND Lname = '√áal√Ω√ækan'
 
 SELECT *
 FROM CONSUMER
@@ -1061,7 +1058,7 @@ FROM COMPANY
 
 UPDATE COMPANY
 SET City = 'Ankara'
-WHERE Company_name = 'ArÁelik'
+WHERE Company_name = 'Ar√ßelik'
 
 SELECT *
 FROM COMPANY
@@ -1070,7 +1067,7 @@ SELECT *
 FROM COMMUNITY
 
 UPDATE COMMUNITY
-SET Community_subject = 'Eitim'
+SET Community_subject = 'E√∞itim'
 WHERE Community_subject = 'Ekonomi'
 
 SELECT *
@@ -1087,7 +1084,7 @@ SELECT *
 FROM CONSUMER
 
 DELETE FROM CONSUMER WHERE Fname = 'Kemal';
-DELETE FROM CONSUMER_COURSE WHERE Course_name = 'Olas˝l˝k ve ›statistik';
+DELETE FROM CONSUMER_COURSE WHERE Course_name = 'Olas√Ωl√Ωk ve √ùstatistik';
 DELETE FROM WORKS_FOR WHERE YEAR(Work_start_date) = 2018;
 DELETE FROM SKILL WHERE Skill_name LIKE '_l%';
 DELETE FROM POST WHERE YEAR(Post_time) = 2020;
