@@ -493,3 +493,194 @@ A submission post contains only one submission.
 ## EER LinkedinMoodle
 ![EER Diagram](https://user-images.githubusercontent.com/112978786/194402657-a31ed67b-20ea-4ce7-b904-add4f4bb931b.jpg)
 
+## Mapping of LinkedinMoodle
+
+**Iteration 1**
+
+**1.**
+
+Community (Community\_id, Community\_name, Community\_subject)
+
+Comment (Comment\_id, Content, Comment\_time)
+
+Skill (Skill\_name)
+
+Company (Company\_id, Company\_name, Country, City, Company\_industry)
+
+University (Uni\_id, Uni\_name, Country, City)
+
+Department (Dept\_id, Dept\_name)
+
+Course (Course\_id, Course\_name, Course\_year, Course\_sem, Skill\_acquisition)
+
+Submission (Submission\_id, Submission\_name, Sub\_date, Content, Grade)
+
+**2.**
+
+Assignment (Course\_id, Assignment\_name, Assn\_start\_date, Assn\_end\_date, Content)
+
+**3.**
+
+University (Uni\_id, Uni\_name, Country, City, Company\_id)
+
+**4.**
+
+Course (Course\_id, Course\_name, Course\_year, Course\_sem, Skill\_acquisition, Dept\_id)
+
+Submission (Submission\_id, Submission\_name, Sub\_date, Content, Grade, Course\_id, Assignment\_name)
+
+Department (Dept\_id, Dept\_name, Uni\_id)
+
+**5.**
+
+**6.**
+
+**7.**
+
+**8.**
+
+**8.a**
+
+Consumer (Consumer\_id, Email, Login\_password, Fname, Lname, Country, City, Birth\_date, Gender)
+
+Student (Consumer\_id)
+
+Instructor (Consumer\_id, Ins\_rank)
+
+Post (Post\_id, Post\_time, Content)
+
+Submission\_post (Post\_id)
+
+**8.b**
+
+Dept\_password (Password\_id, Dept\_ins\_pwd, Dept\_stu\_pwd)
+
+Course\_password (Password\_id, Course\_ins\_pwd, Course\_stu\_pwd)
+
+**9.**
+
+**Iteration 2**
+
+**1.**
+
+**2.**
+
+**3.**
+
+Department (Dept\_id, Dept\_name, Uni\_id, Dept\_pwd\_id)
+
+Course (Course\_id, Course\_name, Course\_year, Course\_sem, Skill\_acquisition, Dept\_id, Course\_pwd\_id)
+
+**4.**
+
+Company (Company\_id, Company\_name, Country, City, Company\_industry, Creater\_id)
+
+Community (Community\_id, Community\_name, Community\_subject, Creater\_id)
+
+Post (Post\_id, Post\_time, Content, Shared\_comm\_id)
+
+Post (Post\_id, Post\_time, Content, Shared\_comm\_id, Sender\_cons\_id)
+
+Submission\_post (Post\_id, Submission\_id)
+
+Comment (Comment\_id, Content, Comment\_time, Post\_id)
+
+Comment (Comment\_id, Content, Comment\_time, Post\_id, Sender\_cons\_id)
+
+Student (Consumer\_id, Dept\_id)
+
+Instructor (Consumer\_id, Ins\_rank, Dept\_İd)
+
+Course (Course\_id, Course\_name, Course\_year, Course\_sem, Skill\_acquisition, Dept\_id, Course\_pwd\_id, Given\_by)
+
+Assignment (Course\_id, Assignment\_name, Assn\_start\_date, Assn\_end\_date, Content, Shared\_by)
+
+Submission (Submission\_id, Submission\_name, Sub\_date, Content, Grade, Course\_id, Assignment\_name, Added\_by)
+
+**5.**
+
+Gets\_education (Consumer\_id, Company\_id, Edu\_start\_date, Edu\_end\_date, Dept\_name)
+
+Works\_for (Consumer\_id, Company\_id, Work\_start\_date, Work\_end\_date, Position)
+
+Consumer\_skill (Consumer\_id, Skill\_name)
+
+Consumer\_skill\_endorse (Endorsed\_consumer, Endorsed\_by, Skill\_name)
+
+Consumer\_Message (Message\_id, Sender\_consumer, Receiver\_consumer, Send\_date, Content)
+
+Community\_member (Community\_id, Member\_id)
+
+Consumer\_comment\_like (Consumer\_id, Comment\_id)
+
+Consumer\_post\_like (Consumer\_id, Post\_id)
+
+Student\_course (Student\_id, Course\_id, Grade)
+
+**6.**
+
+Consumer\_course (Consumer\_id, Course\_name)
+
+Consumer\_language (Consumer\_id, Language\_name)
+
+**7.**
+
+**8.**
+
+**9.**
+
+**Final Version of The Relational Model**
+
+Consumer (Consumer\_id, Email, Login\_password, Fname, Lname, Country, City, Birth\_date, Gender)
+
+Community (Community\_id, Community\_name, Community\_subject, Creater\_id)
+
+Post (Post\_id, Post\_time, Content, Shared\_comm\_id, Sender\_cons\_id)
+
+Comment (Comment\_id, Content, Comment\_time, Post\_id, Sender\_cons\_id)
+
+Skill (Skill\_name)
+
+Company (Company\_id, Company\_name, Country, City, Company\_industry, Creater\_id)
+
+University (Uni\_id, Uni\_name, Country, City, Company\_id)
+
+Dept\_password (Password\_id, Dept\_ins\_pwd, Dept\_stu\_pwd)
+
+Course\_password (Password\_id, Course\_ins\_pwd, Course\_stu\_pwd)
+
+Department (Dept\_id, Dept\_name, Uni\_id, Dept\_pwd\_id)
+
+Student (Consumer\_id, Dept\_id)
+
+Instructor (Consumer\_id, Ins\_rank, Dept\_İd)
+
+Course (Course\_id, Course\_name, Course\_year, Course\_sem, Skill\_acquisition, Dept\_id, Course\_pwd\_id, Given\_by)
+
+Assignment (Course\_id, Assignment\_name, Assn\_start\_date, Assn\_end\_date, Content, Shared\_by)
+
+Submission (Submission\_id, Submission\_name, Sub\_date, Content, Grade, Course\_id, Assignment\_name, Added\_by)
+
+Submission\_post (Post\_id, Submission\_id)
+
+Gets\_education (Consumer\_id, Company\_id, Edu\_start\_date, Edu\_end\_date, Dept\_name)
+
+Works\_for (Consumer\_id, Company\_id, Work\_start\_date, Work\_end\_date, Position)
+
+Consumer\_skill (Consumer\_id, Skill\_name)
+
+Consumer\_skill\_endorse (Endorsed\_consumer, Endorsed\_by, Skill\_name)
+
+Consumer\_message (Message\_id, Sender\_consumer, Receiver\_consumer, Send\_date, Content)
+
+Community\_member (Community\_id, Member\_id)
+
+Consumer\_comment\_like (Consumer\_id, Comment\_id)
+
+Consumer\_post\_like (Consumer\_id, Post\_id)
+
+Student\_course (Student\_id, Course\_id, Grade)
+
+Consumer\_course (Consumer\_id, Course\_name)
+
+Consumer\_language (Consumer\_id, Language\_name)
