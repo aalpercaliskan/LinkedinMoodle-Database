@@ -1,18 +1,18 @@
 # LinkedinMoodle-database
 
-## 1. Explanation About Scope of LinkedIn
+## Explanation About Scope of LinkedIn
 
 LinkedIn is a professional business network and social sharing platform in general. It allows people in the business world to communicate with each other. Posts are generally related more business and education. With LinkedIn, users can share posts, organize events, create and join groups, write articles. Also users can publish their work experience, skills, education, courses and languages they known.
 
-## 2. Explanation About Scope of Moodle
+## Explanation About Scope of Moodle
 
 Moodle (Modular Object Oriented Dynamic Learning Environment) is a free and open source distance education system. Moodle is used by instructors and students. Shares are made about the courses. Instructors can share assignments about courses and students can add submission to assignments.
 
-## 3. Aim of LinkedIn
+## Aim of LinkedIn
 
 Aim of LinkedIn is to bring people in the business world together and provide communicate with each other. It also allows people to find new job opportunities by publishing their education and job histories. LınkedIn provides a more professional network than normal social networking platforms.
 
-## 4. Main Entities of LinkedIn
+## Main Entities of LinkedIn
 
 **USER:** Keeps information about users.
 
@@ -26,7 +26,7 @@ Aim of LinkedIn is to bring people in the business world together and provide co
 
 **COMPANY:** Keeps information about the companies.
 
-## 5. Characteristics of Each Entity in LinkedIn
+## Characteristics of Each Entity in LinkedIn
 
 **USER:** User\_id, Name (FName, Lname), Location (City, Country), Birth\_date, Gender, Email, Phone, {Language}, {Course}
 
@@ -40,7 +40,7 @@ Aim of LinkedIn is to bring people in the business world together and provide co
 
 **COMPANY:** Company\_id, Company\_name, Location (City, Country), Industry
 
-## 6. Relationships Among the Entities in LinkedIn
+## Relationships Among the Entities in LinkedIn
 
 USER _ **HAS** _ SKILL
 
@@ -68,7 +68,7 @@ USER _ **GETS\_EDUCATION** _ COMPANY
 
 USER _ **WORKS** _ COMPANY
 
-## 7. Constraints Related to Entities, Their Characteristics and The Relationships Among Them in Linkedin
+## Constraints Related to Entities, Their Characteristics and The Relationships Among Them in Linkedin
 
 The database keep user data (USER) and each user has a unique identifier (User\_id), unique e-mail (Email), name (Name, composed of first name (Fname), last name (Lname)), location (Location, composed of country (Country), city (City)), birth date (Birth\_date), gender (Gender), phone number (Phone), languages (Language), courses (Course). A user can have multiple languages and courses.
 
@@ -128,11 +128,11 @@ Any number of users can get educaction from a company.
 
 Any number of users can work for a company.
 
-## 8. Aim of Moodle
+## Aim of Moodle
 
 Aim of Moodle is to enable education to be conducted remotely. It also provides an environment where students and instructors can always be in touch. It allows sharing of documents related to courses. With this application, students can view the courses in a more compact way. Because everything related to course content is can be found in this application.
 
-## 9. Main Entities of Moodle
+## Main Entities of Moodle
 
 **USER:** It is the entity where user records are kept. User must be a student or teacher.
 
@@ -144,7 +144,7 @@ Aim of Moodle is to enable education to be conducted remotely. It also provides 
 
 **ASSIGNMENT:** It is the entity where assignment records are kept. It depends on Course.
 
-## 10. Characteristics of Each Entity in Moodle
+## Characteristics of Each Entity in Moodle
 
 **USER:** User\_id, Name (Fname, Lname), Location (City, Country), Email, Phone
 
@@ -156,7 +156,7 @@ Aim of Moodle is to enable education to be conducted remotely. It also provides 
 
 **ASSIGNMENT:** Assignment \_name, Start\_date, End\_date, Content
 
-## 11. Relationships Among the Entities in Moodle
+## Relationships Among the Entities in Moodle
 
 STUDENT _ **TAKES** _ COURSE
 
@@ -168,7 +168,7 @@ COURSE _ **HAS** _ ASSIGNMENT
 
 STUDENT _ **ADD\_SUBMISSION** _ ASSIGNMENT
 
-## 12. Constraints Related to Entities, Their Characteristics and The Relationships Among Them in Moodle
+## Constraints Related to Entities, Their Characteristics and The Relationships Among Them in Moodle
 
 The database keep user data (USER) and each user has a unique identifier (User\_id), name (Name, composed of first name (Fname), last name (Lname)), location (Location, composed of country (Country), city (City)), e-mail (Email), phone number (Phone).
 
@@ -202,7 +202,7 @@ A student can add submission to any number of assignment.
 
 A student can take any number of course. The database keeps track of grade of students for each course.
 
-## 13. LinkedinMoodle
+## LinkedinMoodle
 
 Consumers must be registered to use the application. After signing up, they can log in with their password.
 
@@ -214,7 +214,7 @@ If consumers want to add that they are get eduction somewhere or they are workin
 
 A community with the name of the course is automatically opened from its own account after insturctors register for the course. After a student enrolls in a course, they are automatically added to the community of the instructor who gives that course. Instructors and students can share about courses in this community. A instructor can only share assignments related to the course he has given. A student can only add a submission about the courses he has taken. Otherwise, adding assignment or submission is not allowed. A student can share a submission on social sharing section. When a student registers for a course, the grade he got from that course is also recorded. The student's grade is calculated by dividing the sum of the grades received from the submissions added to the assginments for a course by the number of assignments. Each time a submission is added, the grade for that course is updated. After the relevant semester is over, if that student's grade is over 60, the skill acquisiton of the lesson is automatically added to the consumer's skills and is automatically endorsed by the instructor giving the course. At the same time, the name of the course is automatically added to the courses section of the student because he/she has completed that course.
 
-## 14. Main Entities of LinkedinMoodle
+## Main Entities of LinkedinMoodle
 
 **Consumer:** It is the entity where consumer records are kept. Consumer can be student or instructor.
 
@@ -250,7 +250,7 @@ A community with the name of the course is automatically opened from its own acc
 
 **Submission\_post:** It is the entity where submission post records are kept. Subclass of Post.
 
-## 15. Characteristics of Each Entity in LinkedinMoodle
+## Caracteristics of Each Entity in LinkedinMoodle
 
 **Consumer:** Consumer\_id, Email, Login\_password, Name (Fname, Lname), Location (City, Country), Birth\_date, Gender, {Course}, {Language}
 
@@ -286,7 +286,7 @@ A community with the name of the course is automatically opened from its own acc
 
 **Submission\_post:** (Subclass of Post)
 
-## 16. Relationships Among the Entities in LinkedinMoodle
+## Relationships Among the Entities in LinkedinMoodle
 
 CONSUMER _ **HAS** _ SKILL
 
@@ -344,7 +344,7 @@ SUBMISSION _ **RELATES** _ ASSIGMENT
 
 SUBMISSION\_POST _ **CONTAIN** _ SUBMISSION
 
-## 17. Constraints Related to Entities, Their Characteristics and The Relationships Among Them in LinkedinMoodle
+## Constraints Related to Entities, Their Characteristics and The Relationships Among Them in LinkedinMoodle
 
 The database keep consumer data (CONSUMER) and each consumer has a unique identifier (Consumer\_id), unique e-mail (Email), name (Name, composed of first name (Fname), last name (Lname)), location (Location, composed of country (Country), city (City)), birth date (Birth\_date), gender (Gender), password for login (Login\_password), languages (Language), courses (Course). A consumer can have multiple languages and courses.
 
